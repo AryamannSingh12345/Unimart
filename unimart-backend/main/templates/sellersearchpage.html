@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <title>Seller Search</title>
+</head>
+<body>
+<header class="text-gray-600 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <a href="/home/"><span class="ml-3 text-xl">Unimart</span>
+    </a>
+    </a>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      <a class="mr-5 hover:text-gray-900" href = "/seller/create-post/">Create Post</a>
+      <a class="mr-5 hover:text-gray-900" href = "/seller/my-posts/">My Posts</a>
+      <a class="mr-5 hover:text-gray-900" href = "/contact-us/">Contact Us</a>
+      <a class="mr-5 hover:text-gray-900" href = "/userpage/">User Profile</a>
+    </nav>
+    <a href="/logout/"><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Log out</a>
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+        <path d="M5 12h14M12 5l7 7-7 7"></path>
+      </svg>
+    </button>
+   </div>
+</header><br><br><br><br><br><br><br><br><br>
+<div class="relative mb-1 md:ml-auto flex flex-wrap items-center text-base justify-center">
+  <h1 class="title-font sm:text-2xl text-3xl mb-4 font-medium text-gray-900">Finding potential buyers</h1>
+</div>
+<form id="form" role="search" method = "POST"> {% csrf_token %}
+<div class="relative mb-4 md:ml-auto flex flex-wrap items-center text-base justify-center">
+  <input type="text" id="product_name" name="product_name" class="w-1/2full bg-white rounded border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-5 leading-8 transition-colors duration-200 ease-in-out">
+  <button class="text-white bg-indigo-500 border-0 py-2 px-2 focus:outline-none hover:bg-indigo-600 rounded" style="margin-left:10px;">Search</button>
+</div>
+</form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer class="text-gray-600 body-font">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+    </a>
+    <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2022 Unimart 
+    </p>
+  </div>
+</footer>
+</body>
+</html>
